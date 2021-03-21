@@ -229,9 +229,9 @@ minetest.register_node("cottages:anvil", {
 		end
 		minetest.after(2, function()
 			if( puncher ) then
-				puncher:hud_remove(hud1);
-				puncher:hud_remove(hud2);
-				puncher:hud_remove(hud3);
+				if(hud1) then puncher:hud_remove(hud1); end
+				if(hud2) then puncher:hud_remove(hud2); end
+				if(hud3) then puncher:hud_remove(hud3); end
 			end
 		end)
 
@@ -247,7 +247,7 @@ minetest.register_node("cottages:anvil", {
 		inv:set_stack("input", 1, input)
 
 		-- damage the hammer slightly
-		wielded:add_wear( 4500 );
+		wielded:add_wear( 100 );
 		puncher:set_wielded_item( wielded );
 
 		-- do not spam too much
@@ -260,8 +260,7 @@ minetest.register_node("cottages:anvil", {
 })
 
 
--- used for: anvil, hammer, barrel, steel hatch, stove pipe, wagon wheel, handmill.
---cottages.craftitem_steel = "default:steel_ingot";
+
 ---------------------------------------------------------------------------------------
 -- crafting receipes
 ---------------------------------------------------------------------------------------
@@ -297,8 +296,8 @@ end
 minetest.register_craft({
 	output = "cottages:hammer",
 	recipe = {
-                {cottages.craftitem_steel,cottages.craftitem_steel,cottages.craftitem_steel},
-                {cottages.craftitem_steel,cottages.craftitem_steel,cottages.craftitem_steel},
-                {'default:duct_tape',                   cottages.craftitem_stick,      ''                   } }
+                {cottages.craftitem_steel},
+                {'cottages:anvil'},
+                {cottages.craftitem_stick} }
 })
 

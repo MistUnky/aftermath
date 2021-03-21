@@ -3,3 +3,4 @@ stairs
 doors
 valleys_c?
 integral?
+fire?

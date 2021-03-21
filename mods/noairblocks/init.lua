@@ -82,11 +82,11 @@ action = function(pos, node, active_object_count, active_object_count_wider)
 	local xn = {x = pos.x - 1, y = pos.y, z = pos.z}
 	local yp= {x = pos.x, y = pos.y + 1, z = pos.z}
 	local xnyp= {x = pos.x - 1, y = pos.y + 1, z = pos.z}
-	if minetest.get_node(xn).name == "default:mud" and
+	if minetest.get_node(xn).name == "default:dirt" and
 			minetest.get_node(yp).name ~= "air" and
 			minetest.get_node(xnyp).name ~= "air" then 
 				minetest.add_node(xn, {name = "noairblocks:water_sourcex"}) else
-	if minetest.get_node(xn).name == "default:mud" and
+	if minetest.get_node(xn).name == "default:dirt" and
 			minetest.get_node(yp).name ~= "air" and
 			minetest.get_node(xnyp).name ~= "air" then 
 				minetest.add_node(xn, {name = "noairblocks:water_flowingx"}) else
@@ -104,11 +104,11 @@ action = function(pos, node, active_object_count, active_object_count_wider)
 	local xp = {x = pos.x + 1, y = pos.y, z = pos.z}
 	local yp= {x = pos.x, y = pos.y + 1, z = pos.z}
 	local xpyp= {x = pos.x + 1, y = pos.y + 1, z = pos.z}
-	if minetest.get_node(xp).name == "default:mud" and
+	if minetest.get_node(xp).name == "default:dirt" and
 			minetest.get_node(yp).name ~= "air" and
 			minetest.get_node(xpyp).name ~= "air" then 
 				minetest.add_node(xp, {name = "noairblocks:water_sourcex"}) else
-	if minetest.get_node(xp).name == "default:mud" and
+	if minetest.get_node(xp).name == "default:dirt" and
 			minetest.get_node(yp).name ~= "air" and
 			minetest.get_node(xpyp).name ~= "air" then  
 				minetest.add_node(xp, {name = "noairblocks:water_flowingx"}) else
@@ -126,11 +126,11 @@ action = function(pos, node, active_object_count, active_object_count_wider)
 	local zn = {x = pos.x, y = pos.y, z = pos.z - 1}
 	local yp= {x = pos.x, y = pos.y + 1, z = pos.z}
 	local znyp= {x = pos.x, y = pos.y + 1, z = pos.z - 1}
-	if minetest.get_node(zn).name == "default:mud" and
+	if minetest.get_node(zn).name == "default:dirt" and
 			minetest.get_node(yp).name ~= "air" and
 			minetest.get_node(znyp).name ~= "air" then 
 				minetest.add_node(zn, {name = "noairblocks:water_sourcex"}) else
-	if minetest.get_node(zn).name == "default:mud" and
+	if minetest.get_node(zn).name == "default:dirt" and
 			minetest.get_node(yp).name ~= "air" and
 			minetest.get_node(znyp).name ~= "air" then 
 				minetest.add_node(zn, {name = "noairblocks:water_flowingx"}) else
@@ -148,11 +148,11 @@ action = function(pos, node, active_object_count, active_object_count_wider)
 	local zp = {x = pos.x, y = pos.y, z = pos.z + 1}
 	local yp= {x = pos.x, y = pos.y + 1, z = pos.z}
 	local zpyp= {x = pos.x, y = pos.y + 1, z = pos.z + 1}
-	if minetest.get_node(zp).name == "default:mud" and
+	if minetest.get_node(zp).name == "default:dirt" and
 			minetest.get_node(yp).name ~= "air" and
  			minetest.get_node(zpyp).name ~= "air" then 
 				minetest.add_node(zp, {name = "noairblocks:water_sourcex"}) else
-	if minetest.get_node(zp).name == "default:mud" and
+	if minetest.get_node(zp).name == "default:dirt" and
 			minetest.get_node(yp).name ~= "air" and
 			minetest.get_node(zpyp).name ~= "air" then  
 				minetest.add_node(zp, {name = "noairblocks:water_flowingx"}) else
@@ -168,9 +168,9 @@ interval = 1,
 chance = 1,
 action = function(pos, node, active_object_count, active_object_count_wider)
 	local yp= {x = pos.x, y = pos.y + 1, z = pos.z}
-	if minetest.get_node(yp).name == "default:mud" then 
+	if minetest.get_node(yp).name == "default:dirt" then 
 			minetest.add_node(yp, {name = "noairblocks:water_sourcex"}) else
-	if minetest.get_node(yp).name == "default:mud" then
+	if minetest.get_node(yp).name == "default:dirt" then
 			minetest.add_node(yp, {name = "noairblocks:water_flowingx"}) else
 			return
 		end
@@ -185,10 +185,10 @@ chance = 1,
 action = function(pos, node, active_object_count, active_object_count_wider)
 	local yn = {x = pos.x, y = pos.y - 1, z = pos.z}
 	local yp= {x = pos.x, y = pos.y + 1, z = pos.z}
-	if minetest.get_node(yn).name == "default:mud" and
+	if minetest.get_node(yn).name == "default:dirt" and
 			minetest.get_node(yp).name ~= "air" then 
 			minetest.add_node(yn, {name = "noairblocks:water_sourcex"}) else
-	if minetest.get_node(yn).name == "default:mud" and
+	if minetest.get_node(yn).name == "default:dirt" and
 			minetest.get_node(yp).name ~= "air" then 
 			minetest.add_node(yn, {name = "noairblocks:water_flowingx"}) else
 			return
@@ -209,7 +209,7 @@ action = function(pos, node, active_object_count, active_object_count_wider)
 local pos0 = {x=pos.x-1,y=pos.y-1,z=pos.z-1}
 local pos1 = {x=pos.x+1,y=pos.y+1,z=pos.z+1}
 	if #minetest.find_nodes_in_area(pos0, pos1, "group:sea") < 1 then
-	minetest.add_node(pos, {name = "default:mud"}) else
+	minetest.add_node(pos, {name = "default:dirt"}) else
 	return
 	end
 end,
@@ -223,7 +223,7 @@ action = function(pos, node, active_object_count, active_object_count_wider)
 local pos0 = {x=pos.x-1,y=pos.y-1,z=pos.z-1}
 local pos1 = {x=pos.x+1,y=pos.y+1,z=pos.z+1}
 	if #minetest.find_nodes_in_area(pos0, pos1, "group:sea") < 1 then
-	minetest.add_node(pos, {name = "default:mud"}) else
+	minetest.add_node(pos, {name = "default:dirt"}) else
 	return
 	end
 end,

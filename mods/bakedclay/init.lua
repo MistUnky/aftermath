@@ -225,7 +225,7 @@ minetest.register_decoration({
 	y_max = 15,
 	decoration = "bakedclay:mannagrass",
 	--spawn_by = "group:water",
-	spawn_by = "default:mud",
+	spawn_by = "default:dirt",
 	num_spawn_by = 1,
 })
 

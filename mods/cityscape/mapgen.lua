@@ -107,7 +107,7 @@ function check_for_water(qx, qz, anchor)
 	local found_water = false
 	local ivm = a:index((qx - 1) * div_sz_x + minp.x, anchor, (qz - 1) * div_sz_z + minp.z)
 	for y = anchor, maxp.y do
-		if data[ivm] == node("default:mud") then
+		if data[ivm] == node("default:dirt") then
 			anchor = y
 			found_water = true
 		end

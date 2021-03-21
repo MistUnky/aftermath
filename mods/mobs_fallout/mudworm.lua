@@ -1,5 +1,5 @@
 --mobs:spawn_specific("mobs_fallout:sandworm", {"default:mud", "default:toxic_water_source"}, {"air"}, 0, 20, 20, 9000, 2, -31000, 31000)
-mobs:register_spawn("mobs_fallout:mudworm", {"default:mud","default:mud_flowing",  "default:toxic_water_source", "default:toxic_water_flowing"}, 9, -1, 9000, 2, 31000)
+mobs:register_spawn("mobs_fallout:mudworm", {"default:dirt",  "default:toxic_water_source", "default:toxic_water_flowing"}, 9, -1, 9000, 2, 31000)
 mobs:register_mob("mobs_fallout:mudworm", {
 	type = "monster",
 	group_attack = true,
@@ -59,7 +59,7 @@ mobs:register_mob("mobs_fallout:mudworm", {
 					local t = {x=pos.x+dx, y=pos.y+dy, z=pos.z+dz}
 					local n = minetest.env:get_node(p).name
 					if (n~="default:toxic_water_source" and n~="default:toxic_water_flowing") then
-						if n=="default:mud" or n=="default:mud_flowing" then
+						if n=="default:dirt" then
 							minetest.env:set_node(t, {name="air"})
 						end
 					end

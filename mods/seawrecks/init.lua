@@ -3,7 +3,7 @@
 
 minetest.register_node("seawrecks:woodship", {
 	description = "Sand for the wooden ship",
-	tiles = {"default_mud.png"},
+	tiles = {"default_dirt.png"},
 	is_ground_content = true,
 	groups = {crumbly=3, falling_node=1, sand=1, soil=1, not_in_creative_inventory=1},
 	sounds = default.node_sound_sand_defaults(),
@@ -11,7 +11,7 @@ minetest.register_node("seawrecks:woodship", {
 
 minetest.register_node("seawrecks:uboot", {
 	description = "Dirt for the U-boot",
-	tiles = {"default_mud.png"},
+	tiles = {"default_dirt.png"},
 	is_ground_content = true,
 	groups = {crumbly=3,soil=1, not_in_creative_inventory=1},
 	sounds = default.node_sound_dirt_defaults(),
@@ -118,7 +118,7 @@ meta:from_table({
 minetest.register_ore({
 	ore_type       = "scatter",
 	ore            = "seawrecks:woodship",
-	wherein        = "default:mud",
+	wherein        = "default:dirt",
 	clust_scarcity = 52*52*52,
 	clust_num_ores = 1,
 	clust_size     = 1,
@@ -140,7 +140,7 @@ minetest.register_ore({
 minetest.register_ore({
 	ore_type       = "scatter",
 	ore            = "seawrecks:uboot",
-	wherein        = "default:mud",
+	wherein        = "default:dirt",
 	clust_scarcity = 130*130*130,
 	clust_num_ores = 1,
 	clust_size     = 1,
@@ -197,7 +197,7 @@ chance = 1,
 action = function(pos, node, active_object_count, active_object_count_wider)
 local yp = {x = pos.x, y = pos.y + 3, z = pos.z}
 	if minetest.get_node(pos).name == "seawrecks:woodship" and 
-	(minetest.get_node(yp).name == "default:mud" or
+	(minetest.get_node(yp).name == "default:dirt" or
 	minetest.get_node(yp).name == "noairblocks:water_sourcex") then
 		minetest.add_node(pos, {name = "default:dry_dirt"})
 
@@ -374,7 +374,7 @@ chance = 1,
 action = function(pos, node, active_object_count, active_object_count_wider)
 local yp = {x = pos.x, y = pos.y + 8, z = pos.z}
 	if minetest.get_node(pos).name == "seawrecks:uboot" and 
-	(minetest.get_node(yp).name == "default:mud" or
+	(minetest.get_node(yp).name == "default:dirt" or
 	minetest.get_node(yp).name == "noairblocks:water_sourcex") then
 		minetest.add_node(pos, {name = "default:dry_dirt"})
 
